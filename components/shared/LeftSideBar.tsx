@@ -12,8 +12,8 @@ const LeftSideBar = (props: Props) => {
   const router = useRouter();
   const pathname = usePathname();
   return (
-    <section className="custom-scrollbar sticky overflow-auto flex flex-row h-screen pl-6 pt-28 pb-4 max-md:hidden">
-      <div className="flex flex-col items-center py-12 bg-white rounded-2xl">
+    <section className=" sticky  flex flex-row h-screen pl-6 pt-28 pb-4 max-md:hidden">
+      <div className=" custom-scrollbar overflow-auto  flex flex-col items-center py-12 bg-white rounded-2xl">
         <div className="flex w-full flex-1 flex-col">
           {sidebarLinks.map((link) => {
             const isActive =

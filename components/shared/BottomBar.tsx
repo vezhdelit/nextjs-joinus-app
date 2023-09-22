@@ -11,8 +11,8 @@ const BottomBar = (props: Props) => {
   const router = useRouter();
   const pathname = usePathname();
   return (
-    <section className="fixed bottom-0 z-10 w-full rounded-t-3xl bg-white p-4 backdrop-blur-lg xs:px-7 md:hidden">
-      <div className="flex items-center justify-between gap-3 xs:gap-5">
+    <section className="fixed bottom-0 z-10 w-full p-4 px-6 pb-4 md:hidden">
+      <div className=" bg-white flex items-center justify-between gap-3 xs:gap-5 rounded-2xl px-4 py-4">
         {sidebarLinks.map((link) => {
           const isActive =
             (pathname.includes(link.route) && link.route.length > 1) ||
