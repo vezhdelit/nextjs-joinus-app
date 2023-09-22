@@ -8,7 +8,7 @@ const Home = async () => {
     redirect("/onboarding");
   }
   return (
-    <section className="flex w-full h-screen  flex-1 flex-col px-6 pb-4 gap-8 pt-28">
+    <section className="flex w-full h-screen  flex-1 flex-col px-6  gap-6 pt-28  md:pb-4 sm:pb-40 max-sm:pb-28">
       <div className=" bg-white px-8 py-4 rounded-2xl">
         <h1>New York City</h1>
       </div>

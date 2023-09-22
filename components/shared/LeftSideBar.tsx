@@ -12,7 +12,7 @@ const LeftSideBar = (props: Props) => {
   const router = useRouter();
   const pathname = usePathname();
   return (
-    <section className="custom-scrollbar sticky overflow-auto flex flex-row h-screen pl-8 pt-28 pb-4 max-md:hidden">
+    <section className="custom-scrollbar sticky overflow-auto flex flex-row h-screen pl-6 pt-28 pb-4 max-md:hidden">
       <div className="flex flex-col items-center py-12 bg-white rounded-2xl">
         <div className="flex w-full flex-1 flex-col">
           {sidebarLinks.map((link) => {
@@ -24,7 +24,7 @@ const LeftSideBar = (props: Props) => {
               <Link
                 href={link.route}
                 key={link.label}
-                className={`hover:bg-lightsky/50 relative flex items-center justify-start gap-6 py-4 pl-12 pr-28 ${
+                className={`hover:bg-lightsky/50 relative flex items-center justify-start gap-6 py-4 px-12 ${
                   isActive && " bg-lightsky  text-sky-500 font-bold"
                 }`}
               >
@@ -53,7 +53,7 @@ const LeftSideBar = (props: Props) => {
         <div className="flex flex-col w-full ">
           <SignedIn>
             <SignOutButton signOutCallback={() => router.push("/sign-in")}>
-              <div className=" hover:bg-lightsky/50 flex items-center cursor-pointer gap-6 py-4 pl-12 pr-28">
+              <div className=" hover:bg-lightsky/50 flex items-center cursor-pointer gap-6 py-4 px-12">
                 <svg
                   height="40px"
                   viewBox="0 0 12 12"

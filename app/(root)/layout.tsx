@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import TopBar from "@/components/shared/TopBar";
 import LeftSideBar from "@/components/shared/LeftSideBar";
 import RightSideBar from "@/components/shared/RightSideBar";
+import BottomBar from "@/components/shared/BottomBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,11 +24,12 @@ export default function RootLayout({
       <html lang="en">
         <body className={`${inter.className} bg-lightwater`}>
           <TopBar />
-          <main className="flex flex-row">
+          <main className="flex flex-row justify-center">
             <LeftSideBar />
             {children}
             <RightSideBar />
           </main>
+          <BottomBar />
         </body>
       </html>
     </ClerkProvider>
