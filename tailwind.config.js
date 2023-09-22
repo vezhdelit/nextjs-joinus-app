@@ -18,6 +18,7 @@ module.exports = {
     extend: {
       colors: {
         lightwater: "#EFF3F6",
+        lightsky: "#F4FBFF",
 
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
