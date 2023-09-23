@@ -12,7 +12,7 @@ const Home = async () => {
       <div className=" bg-white px-8 py-4 rounded-2xl">
         <h1>New York City</h1>
       </div>
-      <div className="flex flex-1 bg-white rounded-2xl">
+      <div className=" overflow-auto  flex flex-1 bg-white rounded-2xl">
         <Image
           src={"https://i.imgur.com/FJ4KMbI.png"}
           alt=""
