@@ -9,7 +9,7 @@ const OnBoardPage = async (props: Props) => {
 
   return (
     <main className="mx-auto flex max-w-3xl flex-col justify-start px-10 py-20">
-      <section className="mt-9 bg-midnight rounded-lg p-10">
+      <section className="bg-midnight mt-9 rounded-lg p-10">
         <h1 className=" text-center text-2xl font-bold text-white">
           Complete your profile
         </h1>

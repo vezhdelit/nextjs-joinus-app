@@ -8,17 +8,17 @@ const Home = async () => {
     redirect("/onboarding");
   }
   return (
-    <section className="flex w-full h-screen  flex-1 flex-col px-6  gap-6 pt-28  md:pb-4 sm:pb-40 max-sm:pb-28 max-sm:pt-6">
-      <div className=" bg-white px-8 py-4 rounded-2xl">
+    <section className="flex h-screen w-full  flex-1 flex-col gap-6  px-6 pt-32 max-sm:pb-28 max-sm:pt-6 sm:pb-40 md:pb-4">
+      <div className=" rounded-2xl bg-white px-8 py-4">
         <h1>New York City</h1>
       </div>
-      <div className=" overflow-auto  flex flex-1 bg-white rounded-2xl">
+      <div className=" flex  flex-1 overflow-auto rounded-2xl bg-white">
         <Image
           src={"https://i.imgur.com/FJ4KMbI.png"}
           alt=""
           width={2000}
           height={500}
-          className="object-cover rounded-2xl"
+          className="rounded-2xl object-cover"
         ></Image>
       </div>
     </section>

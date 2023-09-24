@@ -12,8 +12,8 @@ const LeftSideBar = (props: Props) => {
   const router = useRouter();
   const pathname = usePathname();
   return (
-    <section className=" sticky  flex flex-row h-screen pl-6 pt-28 pb-4 max-md:hidden">
-      <div className=" custom-scrollbar overflow-auto  flex flex-col items-center py-12 bg-white rounded-2xl">
+    <section className=" sticky  flex h-screen flex-row pb-4 pl-6 pt-32  max-md:hidden">
+      <div className=" custom-scrollbar flex  flex-col items-center overflow-auto rounded-2xl bg-white py-12">
         <div className="flex w-full flex-1 flex-col">
           {sidebarLinks.map((link) => {
             const isActive =
@@ -24,46 +24,29 @@ const LeftSideBar = (props: Props) => {
               <Link
                 href={link.route}
                 key={link.label}
-                className={`hover:bg-lightsky/50 relative flex items-center justify-start gap-6 py-4 px-12 ${
-                  isActive && " bg-lightsky  text-sky-500 font-bold"
+                className={`relative flex items-center justify-start gap-6 px-12 py-4 hover:bg-lightsky/50 ${
+                  isActive && " bg-lightsky  font-bold text-sky-500"
                 }`}
               >
-                <svg
-                  height="40px"
-                  viewBox="0 0 12 12"
-                  width="40px"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g id="Layer_3">
-                    <circle
-                      cx="6"
-                      cy="6"
-                      fill={`${isActive ? "#3FAFEE" : "#D3D3D3"}`}
-                      r="6"
-                    />
-                  </g>
-                </svg>
-                {/* <Image src={} alt={link.label} width={24} height={24} /> */}
+                <Image src={link.imgURL} alt="logo" width={40} height={40} />
+
                 <p className=" text-xl max-lg:hidden">{link.label}</p>
               </Link>
             );
           })}
         </div>
 
-        <div className="flex flex-col w-full ">
+        <div className="flex w-full flex-col ">
           <SignedIn>
             <SignOutButton signOutCallback={() => router.push("/sign-in")}>
-              <div className=" hover:bg-lightsky/50 flex items-center cursor-pointer gap-6 py-4 px-12">
-                <svg
-                  height="40px"
-                  viewBox="0 0 12 12"
-                  width="40px"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g id="Layer_3">
-                    <circle cx="6" cy="6" fill="#D3D3D3" r="6" />
-                  </g>
-                </svg>
+              <div className=" flex cursor-pointer items-center gap-6 px-12 py-4 hover:bg-lightsky/50">
+                <Image
+                  src="/assets/logout.svg"
+                  alt="logo"
+                  width={40}
+                  height={40}
+                />
+
                 <p className="text-xl max-lg:hidden">Logout</p>
               </div>
             </SignOutButton>
