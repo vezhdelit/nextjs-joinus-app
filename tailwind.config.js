@@ -16,6 +16,9 @@ module.exports = {
       },
     },
     extend: {
+      filter: {
+        "blue-icon": "invert(56%)",
+      },
       colors: {
         lightwater: "#EFF3F6",
         lightsky: "#F4FBFF",
